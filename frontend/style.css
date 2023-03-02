@@ -1,0 +1,197 @@
+:root {
+  --blue: #7CB0FF;
+  --white: #FFFFFF;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 120%;
+}
+th, td {
+  padding: 0.3em 0.5em;
+}
+th {
+  text-align: left;
+  background-color: var(--blue);
+}
+td {
+  background-color: var(--blue);
+}
+
+.header {
+    width: 30%;
+    margin: 50px auto 0px;
+    color: white;
+    background: #A4FCFF;
+    text-align: center;
+    border: 1px solid #C1C1C1;
+    border-bottom: none;
+    padding: 20px;
+}
+form {
+    width: 30%;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid #C1C1C1;
+    background: white;
+}
+
+/* The sidebar menu */
+.sideNav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: var(--blue); /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sideNav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+}
+
+.sideNav a:hover {
+  color: #f1f1f1;
+}
+
+.sideNav label {
+  padding: 2px 2px 40px 2px;
+  text-decoration: bold;
+  font-size: 30px;
+  color: black;
+  display: block;
+}
+
+.topBar {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.userBox {
+  font-size: 25px;
+  text-align: right;
+  margin-right: 100px;
+}
+
+.main {
+  margin-left: 200px;
+  padding: 0px 10px;
+}
+
+.recordsLabel {
+  font-size: 30px;
+}
+
+.recordList {
+  border: 2px solid;
+  min-height: 70%;
+  width: 80%;
+  position: absolute;
+  background-color: var(--blue);
+  margin-bottom: 20px;
+
+}
+
+.recordListItem {
+  padding: 20px;
+  background-color: white;
+  margin: 3px;
+}
+
+.recordListAttribute {
+  padding: 20px;
+}
+
+.recordListHeader {
+  background: var(--blue);
+}
+
+.editForm {
+  width: 40%;
+  margin: 0px auto;
+  padding: 20px;
+  border: 1px solid #C1C1C1;
+  background: white;
+}
+
+.editHeader{
+  width: 40%;
+  margin: 50px auto 0px;
+  font-size: 25px;
+  color: black;
+  background: var(--blue);
+  text-align: center;
+  border: 1px solid #C1C1C1;
+  border-bottom: none;
+  padding: 20px;
+}
+
+.editInputGroup label{
+    margin: 10px 0px 10px 0px;
+}
+
+.editInputGroup input{
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid gray;
+    padding-bottom: 10px;
+}
+
+.editBtn {
+    padding: 7px;
+    font-size: 15px;
+    color: white;
+    background: var(--blue);
+    border: none;
+    margin: 10px;
+}
+
+.editTextarea{
+    resize: none;
+    width: 93%;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.editLabel {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.editChangeDetails {
+  padding-bottom: 50px;
+}
+
+.editChangePassword {
+  padding-bottom: 50px;
+}
+
+.editBtnContainer {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.column {
+    text-align: center;
+    float: left;
+    width: 20%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0070)https://www.fit.vutbr.cz/study/courses/IIS/private/projekt/doc.html.cs -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
+    
+    <title>Projekt IIS</title>
+    <style type="text/css">
+    	table { border-collapse: collapse; }
+    	td, th { border: 1px solid black; padding: 0.3em 0.5em; text-align: left; }
+    	dt { font-weight: bold; margin-top: 0.5em; }
+    </style>
+</head>
+<body>
+
+<!-- Zkontrolujte prosím nastavení kódování v hlavičce dokumentu 
+     podle použitého editoru -->
+
+<h1>4. Nemocnice: elektronická zdravotní knížka</h1> <!-- Nahradte názvem svého zadání -->
+
+<dl>
+	<dt>Autoři</dt>
+	<dd>První jméno <!-- Nahraďte skutečným jménem a e-mailem autora a popisem činnosti -->
+	    <a href="mailto:xstafl01@stud.fit.vutbr.cz">xstafl01@stud.fit.vutbr.cz</a> -
+		Vytvoření frontendu, databáze + výpomoc při tvorbě SQL příkazů
+	</dd>
+	<dd>Druhé jméno <!-- Nahraďte skutečným jménem a e-mailem autora a popisem činnosti -->
+	    <a href="mailto:xvasut02@stud.fit.vutbr.cz">xvasut02@stud.fit.vutbr.cz</a> - 
+		Vytvoření backendu, komunikace s databází + výpomoc při tvorbě .js souborů
+	</dd>
+	<dt>URL aplikace</dt>
+	<dd><a href="http://www.stud.fit.vutbr.cz/~xstafl01/index.html">http://www.stud.fit.vutbr.cz/~xstafl01/index.html</a></dd>
+</dl>
+
+<h2>Uživatelé systému pro testování</h2>
+<p>Uveďte prosím existující zástupce <strong>všech rolí uživatelů</strong>.</p>
+<table>
+<tbody><tr><th>Login</th><th>Heslo</th><th>Role</th></tr>
+<tr><td>admin</td><td>admin</td><td>Administrátor</td></tr>
+<tr><td>doktor1</td><td>1234</td><td>Doktor</td></tr>
+<tr><td>user1</td><td>1234</td><td>Pacient</td></tr>
+<tr><td>insurance1</td><td>1234</td><td>Pracovník pojišťovny</td></tr>
+</tbody></table>
+
+<h2>Implementace</h2>
+<p>Veškerý přístup k databázi zařizuje soubor <code style="background-color:#9796965b;">services.php</code>, který taky si upravuje data, která mu přišla do vhodného tvaru.
+Zařizuje jak poslední úpravy dat k předání do databáze tak i SQL příkazy. <br>
+Následující PHP soubory upravují popřípadě kontrolují typ dat před posláním jak do tak z <code style="background-color:#9796965b;">services.php</code> <br>
+Soubor <code style="background-color:#9796965b;">user.php</code> zařizuje funkce, které upravuje, vypisuje, vkládá nebo maže vše ohledně uživatelů.<br>
+Co se týče operací se záznamy, tak ty má na starosti <code style="background-color:#9796965b;">record.php</code>. <br>
+A operace s tikety se zařizují v <code style="background-color:#9796965b;">tickets.php</code>.<br>
+Nakonec <code style="background-color:#9796965b;">router.php</code> komunikuje s frontendem.<br>
+<code style="background-color:#9796965b;">Personnel.js</code> zobrazení seznamu lékařů<br>
+<code style="background-color:#9796965b;">Records.js</code> zobrazení záznamů: jako admin všechny záznamy; jako doktor všechny záznamy, které spravuje; jako pacient všechny jeho záznamy<br>
+<code style="background-color:#9796965b;">Tickets.js</code> zobrazení ticketů: jako admin všechny tickety; jako doktor všechny tickety, kde je zapsaný jako vyšetřující<br>
+<code style="background-color:#9796965b;">Insurance.js</code> zobrazení ticketů: jako pracovník ZP: všechny tickety, které mají status 'Čeká se na vyřízení','Potvrzeno','Zamítnuto'<br>
+<code style="background-color:#9796965b;">Users.js</code> zobrazení uživatelů: jako admin: všichni uživatelé<br>
+<code style="background-color:#9796965b;">TransferRecords.js</code> převedení záznamů na jiného lékaře: jako admin po smazání uživatele<br>
+<code style="background-color:#9796965b;">ReviewTicket.js</code> potvrzení úhrady vyšetření: jako pracovník ZP po zobrazení ticketu v Insurance.js<br>
+<code style="background-color:#9796965b;">Register.js/Login.js</code> registrace a přihlášení uživatele<br>
+<code style="background-color:#9796965b;">EditProfile.js EditRecord.js EditTicket.js</code> editace profilu, záznamu, ticketu<br>
+<code style="background-color:#9796965b;">AddRecord.js AddTicket.js</code> přidání záznamu, ticketu<br>
+</p>
+<h3>Databáze</h3>
+
+<img src="ERD" alt="ERD">
+
+<h2>Instalace</h2>
+
+Stručně popište: 
+<ul>
+<li>PHP backend a sestavený frontend v Reactu 17.0.1 (npm run-script build) jsme nahráli na školní server.</li>
+<li>Program byl implementaván tak, aby fungoval na verzi PHP 5.3</li>
+<li>MySQL skript jsme nahráli na školní server prostřednictvím phpMyAdmin v IS.</li>
+</ul>
+
+<h2>Známé problémy</h2>
+<p>Zapamatování a zadávání generovaných identifikátorů je bohužel potřeba z důvodu nedostatku času je udělaná nápověda pouze v jednom případě</p>
+
+
+</body></html>
